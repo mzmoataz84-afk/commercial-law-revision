@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commercial Law — Visual Master Revision | Mohamed Abdel Salam</title>
+
+  <!-- Google Fonts: Cairo & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            cairo: ['Cairo', 'sans-serif']
+          },
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#22c55e',
+              600: '#16a34a',
+              700: '#15803d',
+              800: '#166534',
+              900: '#14532d',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    #progress-bar { transition: width 0.15s ease-out; }
+    
+    mark.highlight {
+      background-color: #fef08a;
+      color: #854d0e;
+      padding: 0.05em 0.25em;
+      border-radius: 0.2rem;
+    }
+    .dark mark.highlight {
+      background-color: #854d0e;
+      color: #fef08a;
+    }
+
+    /* Screen card animations */
+    .curriculum-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .curriculum-card:hover {
+      transform: translateY(-1.5px);
+    }
+
+    /* =========================================================
+       HIGH-END LUXURY A4 EXECUTIVE LEGAL PRINT STYLESHEET
+       ========================================================= */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm 12mm 14mm 12mm;
+        @top-center { content: none; }
+        @bottom-left {
+          content: "Commercial Law Visual Master Guide — Prepared by Mohamed Abdel Salam (محمد عبد السلام)";
+          font-family: 'Inter', sans-serif;
+          font-size: 7.5pt;
+          font-weight: 600;
+          color: #4b5563;
+        }
+        @bottom-right {
+          content: "Page " counter(page);
+          font-family: 'Inter', sans-serif;
+          font-size: 7.5pt;
+          font-weight: 800;
+          color: #111827;
+        }
+      }
+
+      /* Clean Running Footer */
+      .print-running-footer {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 7.5pt;
+        font-weight: 600;
+        color: #4b5563;
+        border-top: 1pt solid #1f2937;
+        padding-top: 3px;
+        background: #ffffff;
+        z-index: 10000;
+      }
+
+      /* Hide screen-only chrome */
+      header,
+      #bottom-nav,
+      #desktop-sidebar,
+      #print-modal,
+      .no-print,
+      .card-actions,
+      .card-checkbox-container,
+      .screen-only {
+        display: none !important;
+      }
+
+      body {
+        background-color: #ffffff !important;
+        color: #111827 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.34 !important;
+        padding-top: 0 !important;
+        padding-bottom: 12px !important;
+      }
+
+      main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      /* Diagonal Full-Page Print Watermark */
+      .print-watermark {
+        display: block !important;
+        position: fixed;
+        top: 45%;
+        left: -15%;
+        width: 130%;
+        text-align: center;
+        transform: rotate(-35deg);
+        font-family: 'Inter', sans-serif;
+        font-size: 40pt !important;
+        font-weight: 900 !important;
+        text-transform: uppercase !important;
+        color: rgba(100, 116, 139, 0.07) !important;
+        letter-spacing: 3px;
+        pointer-events: none !important;
+        z-index: 9999 !important;
+      }
+
+      /* =====================================
+         PRINT COVER / HERO TITLE BANNER
+         ===================================== */
+      .print-hero-banner {
+        display: block !important;
+        border: 2pt solid #0f172a !important;
+        background: #f8fafc !important;
+        border-radius: 8px !important;
+        padding: 12pt 16pt !important;
+        margin-bottom: 14pt !important;
+        page-break-after: avoid !important;
+      }
+
+      .print-hero-title {
+        font-size: 17pt !important;
+        font-weight: 900 !important;
+        color: #0f172a !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+        margin-bottom: 2pt !important;
+      }
+
+      .print-hero-meta {
+        font-size: 8.5pt !important;
+        font-weight: 700 !important;
+        color: #166534 !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        border-top: 0.8pt solid #cbd5e1 !important;
+        padding-top: 4pt !important;
+        margin-top: 4pt !important;
+      }
+
+      /* =====================================
+         PRINT MIND MAP GRAPHICAL BLOCKS
+         ===================================== */
+      .chapter-mindmap-container {
+        display: block !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        border: 1.5pt solid #1e293b !important;
+        border-radius: 8px !important;
+        padding: 8pt 10pt !important;
+        margin-bottom: 12pt !important;
+        background: #f8fafc !important;
+        box-shadow: none !important;
+      }
+
+      .mindmap-title-row {
+        border-bottom: 1pt solid #cbd5e1 !important;
+        padding-bottom: 3pt !important;
+        margin-bottom: 6pt !important;
+      }
+
+      .mindmap-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6pt !important;
+      }
+
+      .mindmap-node {
+        border: 1pt solid #94a3b8 !important;
+        background: #ffffff !important;
+        padding: 5pt 7pt !important;
+        border-radius: 6px !important;
+        page-break-inside: avoid !important;
+      }
+
+      .mindmap-node h4 {
+        font-size: 8.5pt !important;
+        font-weight: 900 !important;
+        color: #0f172a !important;
+        border-bottom: 0.5pt solid #e2e8f0 !important;
+        padding-bottom: 2pt !important;
+        margin-bottom: 3pt !important;
+      }
+
+      .mindmap-node ul li {
+        font-size: 7.8pt !important;
+        line-height: 1.3 !important;
+        color: #334155 !important;
+      }
+
+      /* =====================================
+         PRINT CHAPTER & CARDS FORMATTING
+         ===================================== */
+      .chapter-section {
+        page-break-before: always;
+        break-before: page;
+        margin-top: 0 !important;
+      }
+      .chapter-section:first-of-type {
+        page-break-before: avoid;
+        break-before: avoid;
+      }
+
+      .chapter-title-header {
+        border-bottom: 2pt solid #0f172a !important;
+        padding-bottom: 3pt !important;
+        margin-bottom: 8pt !important;
+      }
+
+      .chapter-title-text {
+        font-size: 13pt !important;
+        font-weight: 900 !important;
+        color: #0f172a !important;
+        text-transform: uppercase !important;
+      }
+
+      .curriculum-card {
+        display: none !important;
+      }
+
+      .curriculum-card.is-selected-for-print {
+        display: block !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        border: none !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        padding: 5pt 0 6pt 0 !important;
+        margin: 0 0 5pt 0 !important;
+        border-bottom: 0.6pt solid #cbd5e1 !important;
+      }
+
+      .curriculum-card.is-selected-for-print:last-child {
+        border-bottom: none !important;
+      }
+
+      .exam-question-header {
+        font-size: 10pt !important;
+        font-weight: 900 !important;
+        color: #0f172a !important;
+        line-height: 1.25 !important;
+      }
+
+      .unit-number-tag {
+        font-weight: 900 !important;
+        color: #ffffff !important;
+        background-color: #0f172a !important;
+        padding: 1pt 4pt !important;
+        border-radius: 3px !important;
+        font-size: 7.5pt !important;
+      }
+
+      .statutory-content {
+        font-size: 9.3pt !important;
+        line-height: 1.32 !important;
+        color: #1e293b !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 2pt 0 3pt 0 !important;
+      }
+
+      .egyptian-hint-block {
+        display: block !important;
+        font-family: 'Cairo', sans-serif !important;
+        font-size: 8.8pt !important;
+        font-weight: 700 !important;
+        font-style: italic !important;
+        color: #1e293b !important;
+        background: #f1f5f9 !important;
+        border-left: 2.5pt solid #0f172a !important;
+        padding: 2.5pt 6pt !important;
+        margin-top: 2.5pt !important;
+        direction: rtl;
+        border-radius: 0 4px 4px 0 !important;
+      }
+
+      .flashcard-content { display: block !important; }
+      .flashcard-reveal-prompt { display: none !important; }
+    }
+
+    @media screen {
+      .print-watermark,
+      .print-running-footer,
+      .print-hero-banner {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col font-sans transition-colors duration-200 antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- Print Running Footer for Print Mode -->
+  <div class="print-running-footer" aria-hidden="true">
+    <span>Commercial Law Visual Master Guide — Prepared by Mohamed Abdel Salam</span>
+    <span>A4 Executive Legal Sheet</span>
+  </div>
+
+  <!-- Diagonal Full-Page Print Watermark -->
+  <div class="print-watermark" aria-hidden="true">
+    COMMERCIAL LAW — MOHAMED ABDEL SALAM
+  </div>
+
+  <!-- Top Sticky Navigation & Controls -->
+  <header class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 shadow-sm transition-colors">
+    <!-- Live Reading Progress Bar -->
+    <div class="w-full bg-slate-200 dark:bg-slate-800 h-1.5">
+      <div id="progress-bar" class="h-1.5 bg-gradient-to-r from-brand-600 to-emerald-400 w-0"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+        
+        <!-- Left: Logo & Title -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-600 to-emerald-700 text-white flex items-center justify-center font-black text-xl shadow-md shadow-brand-500/20">
+              ⚖️
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h1 class="text-base sm:text-lg font-black tracking-tight text-slate-900 dark:text-white">
+                  Commercial Law
+                </h1>
+                <span class="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-brand-100 text-brand-800 dark:bg-brand-950 dark:text-brand-300">
+                  Visual Revision
+                </span>
+              </div>
+              <p class="text-xs font-semibold text-slate-500 dark:text-slate-400">
+                Prepared by: <span class="text-brand-600 dark:text-brand-400 font-bold">Mohamed Abdel Salam (محمد عبد السلام)</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Mobile Toggle Cluster -->
+          <div class="flex items-center gap-1.5 md:hidden">
+            <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300" title="Toggle Theme">
+              <span class="theme-icon">🌙</span>
+            </button>
+            <button id="print-btn-mobile" class="p-2 rounded-lg bg-brand-600 text-white shadow-sm" title="Smart Print">
+              🖨️
+            </button>
+          </div>
+        </div>
+
+        <!-- Middle: Search Input -->
+        <div class="flex-1 max-w-md relative">
+          <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-400">
+            🔍
+          </div>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search questions, articles, keywords or Egyptian hints..." 
+            class="w-full pl-9 pr-9 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 transition"
+          />
+          <button id="clear-search-btn" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+            ✕
+          </button>
+        </div>
+
+        <!-- Right: Control Toggles & Interactive Viewers -->
+        <div class="hidden md:flex items-center gap-2">
+          <!-- Mindmap Toggle -->
+          <button 
+            id="mindmap-toggle-btn"
+            class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-xl border border-emerald-300 dark:border-emerald-700/60 bg-emerald-50 dark:bg-emerald-950/40 text-emerald-900 dark:text-emerald-300 hover:bg-emerald-100 transition shadow-sm"
+            title="Toggle Visual Mind Maps"
+          >
+            <span>🧠</span>
+            <span id="mindmap-toggle-text">Mind Maps: ON</span>
+          </button>
+
+          <!-- Egyptian Hint Toggle -->
+          <button 
+            id="hints-toggle-btn"
+            class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-xl border border-amber-300 dark:border-amber-700/60 bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 hover:bg-amber-100 transition shadow-sm"
+            title="Toggle Egyptian colloquial hints"
+          >
+            <span>🇪🇬</span>
+            <span id="hints-toggle-text">Hints: ON</span>
+          </button>
+
+          <!-- Theme Toggle -->
+          <button 
+            id="theme-toggle-btn"
+            class="p-2 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-100 transition shadow-sm"
+            title="Toggle Theme"
+          >
+            <span class="theme-icon">🌙</span>
+          </button>
+
+          <!-- Smart Print Button -->
+          <button 
+            id="smart-print-btn"
+            class="flex items-center gap-2 px-3.5 py-1.5 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow-sm shadow-brand-600/30 transition active:scale-95"
+          >
+            <span>🖨️</span>
+            <span>Print PDF</span>
+            <span id="selected-print-badge" class="px-1.5 py-0.2 bg-brand-800 text-[10px] rounded-full">60</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Mobile bar for toggles -->
+      <div class="flex items-center justify-between pt-2 pb-1 md:hidden border-t border-slate-200 dark:border-slate-800 mt-2 text-xs">
+        <div class="flex items-center gap-1">
+          <button id="mindmap-toggle-mobile" class="px-2 py-1 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 font-bold">
+            🧠 Maps: ON
+          </button>
+          <button id="hints-toggle-mobile" class="px-2 py-1 rounded bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 font-bold">
+            🇪🇬 Hints: ON
+          </button>
+        </div>
+        <span id="card-count-mobile" class="text-[11px] text-slate-500">60 questions</span>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Interactive Study Dashboard Bar (Screen Only) -->
+  <section class="screen-only max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-5 w-full">
+    <div class="bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white rounded-2xl p-5 shadow-lg border border-slate-800 relative overflow-hidden">
+      <!-- Decorative background glow -->
+      <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-brand-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 relative z-10">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="px-2 py-0.5 rounded text-[10px] font-black bg-brand-500/20 text-brand-300 border border-brand-500/30">COMPLETE CURRICULUM</span>
+            <span class="text-xs text-slate-400">Official Midterm Syllabus</span>
+          </div>
+          <h2 class="text-lg sm:text-xl font-black mt-1 tracking-tight">
+            Commercial Law Midterm Master Revision
+          </h2>
+          <p class="text-xs text-slate-300 mt-0.5">
+            Designed for high retention: visual mind maps, exam question headers & Egyptian colloquial translations.
+          </p>
+        </div>
+
+        <!-- Quick Stats Chips -->
+        <div class="flex flex-wrap items-center gap-2">
+          <div class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-center">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Total Chapters</div>
+            <div class="text-sm font-black text-brand-400">5 Chapters</div>
+          </div>
+          <div class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-center">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Total Questions</div>
+            <div class="text-sm font-black text-emerald-400">60 Questions</div>
+          </div>
+          <div class="px-3 py-1.5 rounded-xl bg-white/5 border border-white/10 text-center">
+            <div class="text-[10px] text-slate-400 uppercase font-semibold">Mind Maps</div>
+            <div class="text-sm font-black text-amber-400">5 Visual Nodes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex-1 w-full flex gap-6">
+    
+    <!-- Desktop Sidebar -->
+    <aside id="desktop-sidebar" class="hidden lg:block w-72 shrink-0">
+      <div class="sticky top-24 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+        
+        <div class="flex items-center justify-between pb-2.5 border-b border-slate-100 dark:border-slate-800 mb-3">
+          <h2 class="text-xs font-black text-slate-400 uppercase tracking-wider">
+            Study Navigator
+          </h2>
+          <span id="total-units-badge" class="text-[11px] bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300 font-bold px-2 py-0.5 rounded-full">
+            60 Questions
+          </span>
+        </div>
+
+        <!-- Quick Study Mode Filters -->
+        <div class="mb-3 p-2 bg-slate-50 dark:bg-slate-800/60 rounded-xl space-y-1.5 text-xs">
+          <p class="font-bold text-slate-600 dark:text-slate-300 text-[11px] uppercase">⚡ Interactive Tools</p>
+          <div class="grid grid-cols-2 gap-1.5">
+            <button id="test-mode-all-btn" class="p-1.5 bg-white dark:bg-slate-700 rounded-lg text-left font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600 border border-slate-200 dark:border-slate-600 shadow-xs">
+              🙈 Hide Answers
+            </button>
+            <button id="reveal-mode-all-btn" class="p-1.5 bg-white dark:bg-slate-700 rounded-lg text-left font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600 border border-slate-200 dark:border-slate-600 shadow-xs">
+              👀 Show All
+            </button>
+          </div>
+        </div>
+
+        <!-- Chapter list -->
+        <nav id="sidebar-chapters" class="space-y-1 max-h-[calc(100vh-21rem)] overflow-y-auto pr-1">
+          <!-- Populated by JS -->
+        </nav>
+
+        <!-- Quick print select helpers -->
+        <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
+          <button id="select-all-quick" class="text-brand-600 dark:text-brand-400 hover:underline font-bold">Select All</button>
+          <span class="text-slate-300 dark:text-slate-700">|</span>
+          <button id="deselect-all-quick" class="text-slate-500 hover:underline font-medium">Clear All</button>
+        </div>
+
+        <div class="mt-3 pt-2 border-t border-slate-100 dark:border-slate-800/60 text-[11px] text-slate-400 flex items-center justify-between">
+          <span>Prepared by:</span>
+          <strong class="text-slate-700 dark:text-slate-200">Mohamed Abdel Salam</strong>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Container -->
+    <main class="flex-1 min-w-0 pb-20 md:pb-10">
+      
+      <!-- PRINT ONLY HERO TITLE BANNER (First Page of PDF) -->
+      <div class="print-hero-banner" aria-hidden="true">
+        <div class="print-hero-title">Commercial Law — Midterm Revision Guide</div>
+        <div class="text-[9pt] font-semibold text-slate-600">Comprehensive Executive Summary & Visual Architecture • 100% Curriculum Coverage</div>
+        <div class="print-hero-meta">
+          <span>PREPARED BY: MOHAMED ABDEL SALAM (محمد عبد السلام)</span>
+          <span>COMPREHENSIVE MIDTERM CURRICULUM • 60 HIGH-YIELD QUESTIONS</span>
+        </div>
+      </div>
+
+      <!-- Search status banner -->
+      <div id="search-status-banner" class="hidden mb-4 p-3 rounded-xl bg-brand-50 dark:bg-slate-800 border border-brand-200 dark:border-slate-700 text-xs text-brand-900 dark:text-brand-300 flex items-center justify-between">
+        <span id="search-status-text">Showing matches</span>
+        <button id="reset-search-link" class="underline font-bold ml-2">Reset Filter</button>
+      </div>
+
+      <!-- Curriculum Chapters Container -->
+      <div id="curriculum-container" class="space-y-8">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- No results fallback -->
+      <div id="no-results-view" class="hidden py-16 text-center">
+        <div class="text-5xl mb-3">🔍</div>
+        <h3 class="text-base font-bold text-slate-700 dark:text-slate-300">No matching questions found</h3>
+        <p class="text-xs text-slate-500 mt-1">Try another search keyword, article number, or Arabic term.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav id="bottom-nav" class="fixed bottom-0 inset-x-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-t border-slate-200 dark:border-slate-800 z-40 lg:hidden px-2 py-1 shadow-lg">
+    <div id="mobile-nav-chapters" class="flex items-center justify-around">
+      <!-- Injected 5 Chapters tabs -->
+    </div>
+  </nav>
+
+  <!-- Print Modal -->
+  <div id="print-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-slate-900 w-full max-w-xl rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col max-h-[90vh]">
+      
+      <div class="p-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div class="flex items-center space-x-2.5">
+          <span class="text-2xl">🖨️</span>
+          <div>
+            <h3 class="text-base font-bold text-slate-900 dark:text-white">Print / Save as PDF</h3>
+            <p class="text-xs text-slate-500">Includes visual mind maps & high-density legal layout</p>
+          </div>
+        </div>
+        <button id="close-modal-btn" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 p-1 rounded-lg">✕</button>
+      </div>
+
+      <div class="px-4 py-2.5 bg-slate-50 dark:bg-slate-800/60 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs">
+        <div class="space-x-3">
+          <button id="modal-select-all" class="font-bold text-brand-600 dark:text-brand-400 hover:underline">Select All</button>
+          <button id="modal-deselect-all" class="font-medium text-slate-500 hover:underline">Clear All</button>
+        </div>
+        <span id="modal-selected-counter" class="font-bold text-slate-700 dark:text-slate-300">0 questions selected</span>
+      </div>
+
+      <div id="modal-tree-container" class="p-4 overflow-y-auto flex-1 space-y-3 text-xs">
+        <!-- Rendered tree -->
+      </div>
+
+      <div class="p-4 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-between">
+        <span class="text-[11px] text-slate-500">Format: A4 Portrait • Watermarked</span>
+        <div class="flex items-center space-x-2">
+          <button id="cancel-print-btn" class="px-3 py-1.5 text-xs font-semibold rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 transition">Cancel</button>
+          <button id="trigger-print-btn" class="px-4 py-1.5 text-xs font-bold rounded-xl bg-brand-600 hover:bg-brand-700 text-white shadow transition flex items-center gap-1.5">
+            <span>🖨️</span>
+            <span>Print Selected</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Load Data -->
+  <script src="data.js"></script>
+
+  <!-- Interactive & Mind Map Logic -->
+  <script>
+    (function () {
+      'use strict';
+
+      // Visual Mind Maps metadata for each Chapter
+      const CHAPTER_MINDMAPS = {
+        1: {
+          title: "Chapter 1 Architecture: Foundations & Scope of Commercial Law",
+          branches: [
+            {
+              title: "1. Definition & Core Doctrines",
+              color: "border-blue-500 text-blue-700 dark:text-blue-300",
+              items: [
+                "• Subjective View: Law of merchants & enterprise concept",
+                "• Objective View: Law of commercial transactions & acts",
+                "• Egyptian 1883 Code: Purely objective approach",
+                "• Egyptian 1999 Code (No. 17): Enterprise + gathers both views"
+              ]
+            },
+            {
+              title: "2. Statutory Contents of Code",
+              color: "border-purple-500 text-purple-700 dark:text-purple-300",
+              items: [
+                "• Part 1: Trade in General",
+                "• Part 2: Commercial Obligations & Contracts",
+                "• Part 3: Banking Operations",
+                "• Part 4: Commercial Papers",
+                "• Part 5: Bankruptcy & Compositions with Creditors"
+              ]
+            },
+            {
+              title: "3. Civil vs Commercial Rules",
+              color: "border-amber-500 text-amber-700 dark:text-amber-300",
+              items: [
+                "• Prescription: 7 Years (between merchants) vs 10 Years (court rulings)",
+                "• Joint Liability (Solidarity): Presumed for debtors & warrantors",
+                "• Bankruptcy: Restricted to merchants ceasing commercial debts",
+                "• Evidence: Principle of liberty of evidence applies"
+              ]
+            },
+            {
+              title: "4. Monetary & Court Rules",
+              color: "border-emerald-500 text-emerald-700 dark:text-emerald-300",
+              items: [
+                "• Interest: Calculated at Central Bank rate",
+                "• Delay Interest: Payable from maturity date (not claim date)",
+                "• Grace Period (Term of performance): Prohibited except in necessity without damage"
+              ]
+            }
+          ]
+        },
+        2: {
+          title: "Chapter 2 Architecture: The Merchant & Typology of Commercial Acts",
+          branches: [
+            {
+              title: "1. Merchant Definition & Status",
+              color: "border-blue-500 text-blue-700 dark:text-blue-300",
+              items: [
+                "• Natural Person: Regular profession, in his name & for his own account",
+                "• Juristic Person: Any company taking statutory legal form",
+                "• Agent: NOT a merchant (acts for account of principal)",
+                "• Non-Professions: Selling personal owned goods is not commercial"
+              ]
+            },
+            {
+              title: "2. Capacity & Special Persons",
+              color: "border-rose-500 text-rose-700 dark:text-rose-300",
+              items: [
+                "• Legal Age: 21 full Gregorian years (or 18 with court authorization)",
+                "• Small Craftsmen (Art. 16): Exempt from Commercial Law",
+                "• Prohibited Civil Servant (Art. 17): Considered merchant, subject to law & discipline",
+                "• State & Public Bodies (Art. 20): Commercial acts apply, NO bankruptcy"
+              ]
+            },
+            {
+              title: "3. Single Commercial Acts (Art. 4 & 6)",
+              color: "border-amber-500 text-amber-700 dark:text-amber-300",
+              items: [
+                "• Art. 4: Purchase of movables for resale/lease + Renting to lease + Founding companies",
+                "• Art. 6 (Maritime & Air): Shipbuilding, repair, buying/leasing, supplies, transport, loading, employing navigators/pilots"
+              ]
+            },
+            {
+              title: "4. Profession & Accessory Acts (Art. 5, 7, 8)",
+              color: "border-emerald-500 text-emerald-700 dark:text-emerald-300",
+              items: [
+                "• Art. 5 (Profession): Supply, industry, land transport, brokerage, insurance, banks, hotels/cinema",
+                "• Art. 7 (Analogy): Works comparable due to likeness in qualities/purposes",
+                "• Art. 8 (Accessory): Acts of merchant presumed commercial unless proven otherwise"
+              ]
+            }
+          ]
+        },
+        3: {
+          title: "Chapter 3 Architecture: Merchant Rights, Commercial Place & Commercial Registry",
+          branches: [
+            {
+              title: "1. Merchant Intellectual & Trade Rights",
+              color: "border-indigo-500 text-indigo-700 dark:text-indigo-300",
+              items: [
+                "• Name & Brand Protection: Exclusive within the commercial registry area",
+                "• Trademarks & Patents: Protected, requires consent/compensation",
+                "• Chamber of Commerce: Paper authentication & consular legalization abroad"
+              ]
+            },
+            {
+              title: "2. Commercial Place (Fonds de Commerce)",
+              color: "border-amber-500 text-amber-700 dark:text-amber-300",
+              items: [
+                "• Material Elements: Goods, merchandise & non-sale equipment (ACs, mincing, sewing)",
+                "• Moral Elements: Clientele & customers (indispensable), licenses, lease, trademarks, goodwill",
+                "• Financial Valuation: Moral elements far exceed material elements",
+                "• Competition Clause: Max 10 years limit from sale registration",
+                "• Commercial Pledge: Can be pledged as security for bank loans"
+              ]
+            },
+            {
+              title: "3. Hierarchy of Commercial Rules (Art. 1)",
+              color: "border-purple-500 text-purple-700 dark:text-purple-300",
+              items: [
+                "1. Agreement between parties (contract)",
+                "2. Code of Commerce & Commercial Laws",
+                "3. Principles of Commercial Custom (local/special custom prevails)",
+                "4. Provisions of the Civil Code"
+              ]
+            },
+            {
+              title: "4. Commercial Registry Law (Law 34/1976)",
+              color: "border-emerald-500 text-emerald-700 dark:text-emerald-300",
+              items: [
+                "• Capital Threshold: 20,000 EGP for natural persons",
+                "• Nationality: Egyptian + license (Foreigners under Investment Laws)",
+                "• Storefront & Papers: Commercial name, registry office, registration number",
+                "• Validity: 5 years, renewed within 90 days after warning before cancellation",
+                "• Amendments: Submit within 1 month",
+                "• Cancellation: 5 cases (ceasing, leaving forever, death, liquidation, cessation)",
+                "• Excluded Extracts: Adjudication of bankruptcy if repealed or rehabilitated",
+                "• Art. 33: Data opposable from inscription; merchant cannot claim non-registration"
+              ]
+            }
+          ]
+        },
+        4: {
+          title: "Chapter 4 Architecture: Commercial Books & Judicial Evidence",
+          branches: [
+            {
+              title: "1. Scope & Mandatory Books",
+              color: "border-blue-500 text-blue-700 dark:text-blue-300",
+              items: [
+                "• Threshold: Capital exceeding 20,000 EGP",
+                "• Language: In Arabic (foreign auxiliary books permitted)",
+                "• Minimum 3 Books: 1. Daily-Journal, 2. Inventory Book, 3. Correspondence file",
+                "• Electronic systems: Computerized accounts allowed by Ministerial decree"
+              ]
+            },
+            {
+              title: "2. Rules of Maintenance & Entries",
+              color: "border-rose-500 text-rose-700 dark:text-rose-300",
+              items: [
+                "• Journal: Trade acts + personal drawings day by day (drawings total month by month)",
+                "• Inventory: Goods at year-end + annual balance sheet + P&L account",
+                "• Formalities: No empty spaces, erasures, margins; numbered & stamped by Registry Office",
+                "• Employees: Entries by authorized workers deemed as good as trader himself"
+              ]
+            },
+            {
+              title: "3. Retention & Judicial Evidence",
+              color: "border-emerald-500 text-emerald-700 dark:text-emerald-300",
+              items: [
+                "• Retention Period: 5 years from closure visa (5 years for correspondence/microfilm)",
+                "• Specific Extraction: Extracting entries in judge's presence for ordinary disputes",
+                "• Comprehensive Delivery: Strictly 4 cases (estate inheritance, common property, partnership liquidation, bankruptcy)",
+                "• Refusal Presumption: Refusing to submit books creates presumption against trader"
+              ]
+            },
+            {
+              title: "4. Strategic Advantages of Books",
+              color: "border-amber-500 text-amber-700 dark:text-amber-300",
+              items: [
+                "• Evidence in merchant's favor against other merchants",
+                "• Shield against arbitrary tax estimations",
+                "• Establishes good faith and avoids charges of fraudulent bankruptcy"
+              ]
+            }
+          ]
+        },
+        5: {
+          title: "Chapter 5 Architecture: Commercial Companies & Partnerships",
+          branches: [
+            {
+              title: "1. Legal Definition & Formal Criterion",
+              color: "border-blue-500 text-blue-700 dark:text-blue-300",
+              items: [
+                "• Civil Code Definition: Contract of 2 or more contributing pecuniary shares for profit/loss",
+                "• Formal Commercial Criterion: Any company taking statutory form is commercial regardless of whether its activity is commercial or civil",
+                "• Other Forms: Governed strictly by Civil Code as civil companies"
+              ]
+            },
+            {
+              title: "2. Three Master Classifications",
+              color: "border-purple-500 text-purple-700 dark:text-purple-300",
+              items: [
+                "• Companies of Persons: Intuitu personae, unlimited personal joint liability",
+                "• Capital Companies: Collect capital, liability limited to share value",
+                "• Mixed Companies: Merge personal and capital considerations"
+              ]
+            },
+            {
+              title: "3. The 7 Statutory Company Forms",
+              color: "border-amber-500 text-amber-700 dark:text-amber-300",
+              items: [
+                "1. General Partnership (Simple Partnership - Tadamun)",
+                "2. Limited Partnership (Simple Commandite - Tawsiya Bassita)",
+                "3. Joint Adventure / Silent Partnership (Mohasa)",
+                "4. Limited Liability Company (LLC)",
+                "5. Joint Stock Company",
+                "6. Partnership Limited by Shares (Tawsiya Bel-Ashom)",
+                "7. One-Man Company"
+              ]
+            },
+            {
+              title: "4. Public vs Private Sector",
+              color: "border-emerald-500 text-emerald-700 dark:text-emerald-300",
+              items: [
+                "• Public Sector: Government/public capital, usually Joint Stock, public interest utilities (e.g. Railways)",
+                "• Private Sector: Constituted by individuals/companies with exclusively profit-making individual purpose"
+              ]
+            }
+          ]
+        }
+      };
+
+      // Graphical Illustration SVG Badges for specific key topics
+      function getVisualIllustration(unitId) {
+        if (unitId === "u1_1") {
+          return `
+            <div class="screen-only my-3 p-3 rounded-xl bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800/60 flex items-center justify-around text-center text-xs">
+              <div class="p-2 rounded-lg bg-white dark:bg-slate-800 shadow-xs flex-1 max-w-[200px]">
+                <span class="text-xl">👤</span>
+                <div class="font-black text-blue-900 dark:text-blue-200 mt-1">Subjective (ذاتية)</div>
+                <div class="text-[10px] text-slate-500">Law of Merchants & Enterprise</div>
+              </div>
+              <div class="text-lg font-black text-blue-400">⚡ VS ⚡</div>
+              <div class="p-2 rounded-lg bg-white dark:bg-slate-800 shadow-xs flex-1 max-w-[200px]">
+                <span class="text-xl">📄</span>
+                <div class="font-black text-blue-900 dark:text-blue-200 mt-1">Objective (موضوعية)</div>
+                <div class="text-[10px] text-slate-500">Law of Commercial Transactions</div>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u1_4") {
+          return `
+            <div class="screen-only my-3 p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 flex items-center justify-around text-center text-xs">
+              <div class="p-2 rounded-lg bg-white dark:bg-slate-800 shadow-xs flex-1 max-w-[200px]">
+                <span class="text-xl">⏳ 7 Years</span>
+                <div class="font-black text-amber-900 dark:text-amber-200 mt-1">Judicial Actions</div>
+                <div class="text-[10px] text-slate-500">Obligations between merchants</div>
+              </div>
+              <div class="text-lg font-black text-amber-400">➔</div>
+              <div class="p-2 rounded-lg bg-white dark:bg-slate-800 shadow-xs flex-1 max-w-[200px]">
+                <span class="text-xl">🏛️ 10 Years</span>
+                <div class="font-black text-amber-900 dark:text-amber-200 mt-1">Final Court Rulings</div>
+                <div class="text-[10px] text-slate-500">Conclusive judicial decisions</div>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u2_3") {
+          return `
+            <div class="screen-only my-3 p-2.5 rounded-xl bg-rose-50/70 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800/60 flex items-center gap-3 text-xs">
+              <span class="text-2xl">🔞</span>
+              <div>
+                <strong class="text-rose-900 dark:text-rose-200">Legal Capacity Threshold:</strong>
+                <span class="text-slate-600 dark:text-slate-300 ml-1">Full capacity at <strong>21 Years</strong> • Court-supervised minor at <strong>18 Years</strong>.</span>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u3_5") {
+          return `
+            <div class="screen-only my-3 p-3 rounded-xl bg-indigo-50/70 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-800/60 text-xs">
+              <div class="font-black text-indigo-900 dark:text-indigo-200 mb-1 flex items-center gap-1.5">
+                <span>⭐</span>
+                <span>Anatomy of Fonds de Commerce (المحل التجاري)</span>
+              </div>
+              <div class="grid grid-cols-2 gap-2 mt-2">
+                <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
+                  <strong class="text-slate-900 dark:text-slate-100 block text-[11px]">Material Elements:</strong>
+                  <span class="text-[10px] text-slate-500">Goods, merchandise & non-sale equipment (ACs, mincing, sewing machines)</span>
+                </div>
+                <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-indigo-200 dark:border-indigo-800">
+                  <strong class="text-indigo-700 dark:text-indigo-300 block text-[11px]">Moral Elements (Higher Value):</strong>
+                  <span class="text-[10px] text-slate-500"><strong>Clientele & customers (Core)</strong>, licenses, lease, trademarks, goodwill</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u3_8") {
+          return `
+            <div class="screen-only my-3 p-2.5 rounded-xl bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 flex items-center gap-3 text-xs">
+              <span class="text-2xl">🛡️</span>
+              <div>
+                <strong class="text-emerald-900 dark:text-emerald-200">Non-Competition Clause:</strong>
+                <span class="text-slate-600 dark:text-slate-300 ml-1">Protects buyer from seller opening competing shop • Strictly limited to <strong>Max 10 Years</strong>.</span>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u4_1" || unitId === "u3_12") {
+          return `
+            <div class="screen-only my-3 p-2.5 rounded-xl bg-purple-50/70 dark:bg-purple-950/30 border border-purple-200 dark:border-purple-800/60 flex items-center gap-3 text-xs">
+              <span class="text-2xl">💰</span>
+              <div>
+                <strong class="text-purple-900 dark:text-purple-200">Statutory Capital Threshold:</strong>
+                <span class="text-slate-600 dark:text-slate-300 ml-1">Capital exceeding <strong>20,000 EGP</strong> triggers mandatory Commercial Registration & Books.</span>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u4_2") {
+          return `
+            <div class="screen-only my-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-800/70 border border-slate-200 dark:border-slate-700 text-xs">
+              <div class="font-black text-slate-800 dark:text-slate-200 mb-1.5 flex items-center gap-1.5">
+                <span>📚</span>
+                <span>The 3 Mandatory Commercial Books (الدفاتر التجارية الإلزامية)</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center text-[10px]">
+                <div class="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200 dark:border-slate-700 font-bold">
+                  1. Daily-Journal<br><span class="font-normal text-slate-500">دفتر اليومية</span>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200 dark:border-slate-700 font-bold">
+                  2. Inventory Book<br><span class="font-normal text-slate-500">دفتر الجرد</span>
+                </div>
+                <div class="bg-white dark:bg-slate-900 p-2 rounded-lg border border-slate-200 dark:border-slate-700 font-bold">
+                  3. Correspondence<br><span class="font-normal text-slate-500">ملف المراسلات</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+        if (unitId === "u5_4") {
+          return `
+            <div class="screen-only my-3 p-3 rounded-xl bg-brand-50/70 dark:bg-brand-950/30 border border-brand-200 dark:border-brand-800/60 text-xs">
+              <div class="font-black text-brand-900 dark:text-brand-200 mb-1 flex items-center gap-1.5">
+                <span>🏢</span>
+                <span>7 Statutory Forms of Egyptian Commercial Companies</span>
+              </div>
+              <div class="flex flex-wrap gap-1.5 mt-2 text-[10px]">
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">1. General Partnership (تضامن)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">2. Limited Partnership (توصية بسيطة)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">3. Silent Partnership (محاصة)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">4. LLC (مسؤولية محدودة)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">5. Joint Stock (مساهمة)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">6. Commandite by Shares (توصية بالأسهم)</span>
+                <span class="px-2 py-0.5 rounded bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-semibold">7. One-Man Company (شخص واحد)</span>
+              </div>
+            </div>
+          `;
+        }
+        return '';
+      }
+
+      const curriculum = (window.CURRICULUM_DATA && Array.isArray(window.CURRICULUM_DATA) && window.CURRICULUM_DATA.length > 0)
+        ? window.CURRICULUM_DATA
+        : [];
+
+      const state = {
+        selectedForPrint: new Set(),
+        showHints: true,
+        showMindmaps: true,
+        searchQuery: '',
+        flashcardHidden: new Set(),
+        darkMode: false
+      };
+
+      // Select all for print
+      curriculum.forEach(ch => {
+        ch.units.forEach(u => state.selectedForPrint.add(u.id));
+      });
+
+      function initTheme() {
+        const storedTheme = localStorage.getItem('commercial_law_theme_mas');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        state.darkMode = storedTheme ? storedTheme === 'dark' : prefersDark;
+        applyTheme();
+      }
+
+      function applyTheme() {
+        const html = document.documentElement;
+        if (state.darkMode) {
+          html.classList.add('dark');
+          document.querySelectorAll('.theme-icon').forEach(el => el.textContent = '☀️');
+        } else {
+          html.classList.remove('dark');
+          document.querySelectorAll('.theme-icon').forEach(el => el.textContent = '🌙');
+        }
+        localStorage.setItem('commercial_law_theme_mas', state.darkMode ? 'dark' : 'light');
+      }
+
+      function toggleTheme() {
+        state.darkMode = !state.darkMode;
+        applyTheme();
+      }
+
+      function updateProgressBar() {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        const bar = document.getElementById('progress-bar');
+        if (bar) bar.style.width = scrolled + '%';
+      }
+
+      function highlightText(text, query) {
+        if (!query || !query.trim() || !text) return text || '';
+        const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(`(${escaped})`, 'gi');
+        return text.replace(regex, '<mark class="highlight">$1</mark>');
+      }
+
+      function getFormattedUnitNumber(unitId, chapterId, index) {
+        const match = unitId.match(/u?(\d+)_(\d+)/i);
+        if (match) return `${match[1]}.${match[2]}`;
+        return `${chapterId}.${index + 1}`;
+      }
+
+      // Render Curriculum with Mind Maps & Graphics
+      function renderCurriculum() {
+        const container = document.getElementById('curriculum-container');
+        const noResults = document.getElementById('no-results-view');
+        container.innerHTML = '';
+
+        let visibleUnitsCount = 0;
+        const query = state.searchQuery.trim().toLowerCase();
+
+        curriculum.forEach(ch => {
+          const matchingUnits = ch.units.filter(unit => {
+            if (!query) return true;
+            return (
+              (unit.expectedQuestion && unit.expectedQuestion.toLowerCase().includes(query)) ||
+              (unit.en && unit.en.toLowerCase().includes(query)) ||
+              (unit.egHint && unit.egHint.toLowerCase().includes(query)) ||
+              ch.chapterTitle.toLowerCase().includes(query)
+            );
+          });
+
+          if (matchingUnits.length === 0) return;
+          visibleUnitsCount += matchingUnits.length;
+
+          const chapterSection = document.createElement('section');
+          chapterSection.className = 'chapter-section scroll-mt-24';
+          chapterSection.id = `chapter-${ch.chapterId}`;
+
+          // Chapter Header
+          const header = document.createElement('div');
+          header.className = 'chapter-title-header flex items-center justify-between pb-2 mb-4 border-b-2 border-slate-200 dark:border-slate-800';
+          header.innerHTML = `
+            <div>
+              <span class="text-xs font-black text-brand-600 dark:text-brand-400 uppercase tracking-widest">Part 1 • Chapter ${ch.chapterId}</span>
+              <h2 class="chapter-title-text text-lg sm:text-xl font-black text-slate-900 dark:text-white mt-0.5">${ch.chapterTitle}</h2>
+            </div>
+            <span class="screen-only text-xs px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 font-bold">${matchingUnits.length} Qs</span>
+          `;
+          chapterSection.appendChild(header);
+
+          // Integrated Visual Mind Map Diagram
+          const mapData = CHAPTER_MINDMAPS[ch.chapterId];
+          if (mapData) {
+            const mindMapEl = document.createElement('div');
+            mindMapEl.className = `chapter-mindmap-container mb-6 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs ${state.showMindmaps ? 'block' : 'hidden'}`;
+            
+            let branchesHtml = '';
+            mapData.branches.forEach(b => {
+              branchesHtml += `
+                <div class="mindmap-node border-l-4 ${b.color} bg-slate-50 dark:bg-slate-800/40 p-3 rounded-xl border border-slate-200/70 dark:border-slate-700/60">
+                  <h4 class="font-extrabold text-xs mb-1.5">${b.title}</h4>
+                  <ul class="text-[11px] leading-relaxed space-y-1 text-slate-700 dark:text-slate-300 font-medium">
+                    ${b.items.map(it => `<li>${it}</li>`).join('')}
+                  </ul>
+                </div>
+              `;
+            });
+
+            mindMapEl.innerHTML = `
+              <div class="mindmap-title-row flex items-center justify-between pb-2 mb-3 border-b border-slate-100 dark:border-slate-800 text-xs">
+                <div class="flex items-center gap-2">
+                  <span class="text-base">🧠</span>
+                  <span class="font-black text-slate-800 dark:text-slate-200 uppercase tracking-wider">${mapData.title}</span>
+                </div>
+                <span class="text-[10px] text-brand-600 dark:text-brand-400 font-bold uppercase bg-brand-50 dark:bg-brand-950 px-2 py-0.5 rounded-full">Full Chapter Architecture</span>
+              </div>
+              <div class="mindmap-grid grid grid-cols-1 md:grid-cols-2 gap-3">
+                ${branchesHtml}
+              </div>
+            `;
+            chapterSection.appendChild(mindMapEl);
+          }
+
+          // Units Grid
+          const unitsFlow = document.createElement('div');
+          unitsFlow.className = 'space-y-4';
+
+          matchingUnits.forEach((unit, idx) => {
+            const isSelected = state.selectedForPrint.has(unit.id);
+            const isHiddenForFlashcard = state.flashcardHidden.has(unit.id);
+            const unitNumber = getFormattedUnitNumber(unit.id, ch.chapterId, idx);
+            const illustrationHtml = getVisualIllustration(unit.id);
+
+            const card = document.createElement('article');
+            card.id = `card-${unit.id}`;
+            card.className = `curriculum-card relative rounded-2xl border transition-all duration-150 p-4 sm:p-5 bg-white dark:bg-slate-900 ${
+              isSelected 
+                ? 'is-selected-for-print border-slate-200 dark:border-slate-800 shadow-xs' 
+                : 'border-slate-200/60 dark:border-slate-800/60 opacity-70'
+            }`;
+
+            const highlightedQuestion = highlightText(unit.expectedQuestion, query);
+            const highlightedEn = highlightText(unit.en, query);
+            const highlightedEg = highlightText(unit.egHint, query);
+
+            card.innerHTML = `
+              <div class="flex items-start justify-between gap-3 mb-2">
+                <div class="flex items-start gap-2 flex-1">
+                  <span class="unit-number-tag shrink-0 px-2 py-0.5 rounded text-xs font-black bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-mono">
+                    ${unitNumber}
+                  </span>
+                  <h3 class="exam-question-header text-sm sm:text-base font-extrabold text-slate-900 dark:text-white leading-snug">
+                    ${highlightedQuestion}
+                  </h3>
+                </div>
+
+                <div class="card-checkbox-container shrink-0 pt-0.5">
+                  <label class="flex items-center cursor-pointer text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-slate-200 select-none">
+                    <input 
+                      type="checkbox" 
+                      data-unit-id="${unit.id}" 
+                      class="card-print-checkbox rounded border-slate-300 text-brand-600 focus:ring-brand-500 mr-1.5 w-4 h-4 cursor-pointer"
+                      ${isSelected ? 'checked' : ''}
+                    />
+                    <span class="hidden sm:inline">Print</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Optional Graphic Diagram / Illustration -->
+              ${illustrationHtml}
+
+              <!-- Statutory Rule Box -->
+              <div class="relative mt-2">
+                <div class="flashcard-content ${isHiddenForFlashcard ? 'hidden' : 'block'}">
+                  <p class="statutory-content text-slate-800 dark:text-slate-200 text-xs sm:text-sm leading-relaxed bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl border border-slate-100 dark:border-slate-800/70">
+                    ${highlightedEn}
+                  </p>
+                </div>
+
+                <div class="flashcard-reveal-prompt ${isHiddenForFlashcard ? 'flex' : 'hidden'} items-center justify-center p-5 bg-slate-100 dark:bg-slate-800/70 rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 text-center">
+                  <div>
+                    <span class="text-xl">🙈</span>
+                    <p class="text-xs font-bold text-slate-700 dark:text-slate-300 mt-1">Rule hidden for self-testing</p>
+                    <button data-flip-id="${unit.id}" class="flip-btn mt-2 px-3 py-1 bg-brand-600 text-white rounded-lg text-xs font-bold shadow hover:bg-brand-700">Reveal Statutory Rule</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Egyptian Colloquial Hint Block -->
+              <div class="egyptian-hint-block mt-2.5 pt-2 ${state.showHints ? 'block' : 'hidden'}" dir="rtl">
+                <div class="flex items-start gap-2 text-right">
+                  <span class="screen-only text-base shrink-0 select-none">🇪🇬</span>
+                  <div class="flex-1">
+                    <p class="font-cairo text-xs sm:text-sm text-amber-900 dark:text-amber-300 font-bold italic leading-relaxed">
+                      ${highlightedEg}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Card Actions -->
+              <div class="card-actions mt-2.5 pt-2 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500">
+                <button 
+                  data-flip-id="${unit.id}" 
+                  class="flip-btn inline-flex items-center gap-1.5 text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 font-bold transition"
+                >
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                  <span>${isHiddenForFlashcard ? 'Reveal Rule' : 'Self-Test (Hide)'}</span>
+                </button>
+
+                <span class="text-[10px] font-medium text-slate-400">Mohamed Abdel Salam</span>
+              </div>
+            `;
+
+            unitsFlow.appendChild(card);
+          });
+
+          chapterSection.appendChild(unitsFlow);
+          container.appendChild(chapterSection);
+        });
+
+        if (visibleUnitsCount === 0) {
+          noResults.classList.remove('hidden');
+        } else {
+          noResults.classList.add('hidden');
+        }
+
+        updateCounters(visibleUnitsCount);
+        bindCardEvents();
+      }
+
+      function renderNavigation() {
+        const sidebar = document.getElementById('sidebar-chapters');
+        const mobileNav = document.getElementById('mobile-nav-chapters');
+        if (!sidebar || !mobileNav) return;
+
+        sidebar.innerHTML = '';
+        mobileNav.innerHTML = '';
+
+        curriculum.forEach((ch) => {
+          const deskLink = document.createElement('a');
+          deskLink.href = `#chapter-${ch.chapterId}`;
+          deskLink.className = 'group flex items-center justify-between px-3 py-1.5 text-xs font-semibold rounded-xl text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition';
+          deskLink.innerHTML = `
+            <span class="truncate pr-2">${ch.chapterTitle}</span>
+            <span class="px-1.5 py-0.5 rounded text-[10px] bg-slate-100 dark:bg-slate-800 font-mono">${ch.units.length}</span>
+          `;
+          sidebar.appendChild(deskLink);
+
+          const mobBtn = document.createElement('a');
+          mobBtn.href = `#chapter-${ch.chapterId}`;
+          mobBtn.className = 'flex flex-col items-center py-1 px-2 text-slate-600 dark:text-slate-400 hover:text-brand-600 active:scale-95 transition';
+          mobBtn.innerHTML = `
+            <span class="text-sm">📖</span>
+            <span class="text-[9px] font-bold mt-0.5">Ch ${ch.chapterId}</span>
+          `;
+          mobileNav.appendChild(mobBtn);
+        });
+      }
+
+      function bindCardEvents() {
+        document.querySelectorAll('.card-print-checkbox').forEach(cb => {
+          cb.addEventListener('change', (e) => {
+            const unitId = e.target.dataset.unitId;
+            if (e.target.checked) {
+              state.selectedForPrint.add(unitId);
+            } else {
+              state.selectedForPrint.delete(unitId);
+            }
+            updatePrintBadge();
+            const card = document.getElementById(`card-${unitId}`);
+            if (card) {
+              if (e.target.checked) {
+                card.classList.add('is-selected-for-print');
+                card.classList.remove('opacity-70');
+              } else {
+                card.classList.remove('is-selected-for-print');
+                card.classList.add('opacity-70');
+              }
+            }
+          });
+        });
+
+        document.querySelectorAll('.flip-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const unitId = btn.dataset.flipId;
+            const card = document.getElementById(`card-${unitId}`);
+            if (!card) return;
+
+            if (state.flashcardHidden.has(unitId)) {
+              state.flashcardHidden.delete(unitId);
+            } else {
+              state.flashcardHidden.add(unitId);
+            }
+
+            const flashContent = card.querySelector('.flashcard-content');
+            const flashPrompt = card.querySelector('.flashcard-reveal-prompt');
+            const actionBtn = card.querySelector('.card-actions .flip-btn span');
+
+            if (flashContent && flashPrompt) {
+              if (state.flashcardHidden.has(unitId)) {
+                flashContent.classList.add('hidden');
+                flashPrompt.classList.remove('hidden');
+                flashPrompt.classList.add('flex');
+                if (actionBtn) actionBtn.textContent = 'Reveal Rule';
+              } else {
+                flashContent.classList.remove('hidden');
+                flashPrompt.classList.add('hidden');
+                flashPrompt.classList.remove('flex');
+                if (actionBtn) actionBtn.textContent = 'Self-Test (Hide)';
+              }
+            }
+          });
+        });
+      }
+
+      function updateCounters(visibleCount) {
+        const totalUnits = curriculum.reduce((acc, ch) => acc + ch.units.length, 0);
+        const badge = document.getElementById('total-units-badge');
+        if (badge) badge.textContent = `${totalUnits} Questions`;
+
+        const mobileCount = document.getElementById('card-count-mobile');
+        if (mobileCount) {
+          mobileCount.textContent = state.searchQuery 
+            ? `${visibleCount} of ${totalUnits} matches` 
+            : `${totalUnits} questions`;
+        }
+
+        updatePrintBadge();
+      }
+
+      function updatePrintBadge() {
+        const badge = document.getElementById('selected-print-badge');
+        if (badge) {
+          badge.textContent = state.selectedForPrint.size;
+        }
+      }
+
+      function openPrintModal() {
+        const modal = document.getElementById('print-modal');
+        const treeContainer = document.getElementById('modal-tree-container');
+        if (!modal || !treeContainer) return;
+
+        treeContainer.innerHTML = '';
+
+        curriculum.forEach(ch => {
+          const chBoxId = `modal-ch-${ch.chapterId}`;
+          const allUnitsChecked = ch.units.every(u => state.selectedForPrint.has(u.id));
+
+          const group = document.createElement('div');
+          group.className = 'border border-slate-200 dark:border-slate-800 rounded-xl p-3 bg-slate-50/50 dark:bg-slate-800/40';
+
+          const header = document.createElement('div');
+          header.className = 'flex items-center justify-between pb-1.5 border-b border-slate-200 dark:border-slate-700 font-bold';
+          header.innerHTML = `
+            <label class="flex items-center cursor-pointer text-slate-900 dark:text-white">
+              <input type="checkbox" id="${chBoxId}" data-chapter-id="${ch.chapterId}" class="modal-chapter-master rounded border-slate-300 text-brand-600 mr-2 w-4 h-4 cursor-pointer" ${allUnitsChecked ? 'checked' : ''} />
+              <span>${ch.chapterTitle}</span>
+            </label>
+            <span class="text-[11px] text-slate-400 font-normal">(${ch.units.length} Qs)</span>
+          `;
+          group.appendChild(header);
+
+          const unitsList = document.createElement('div');
+          unitsList.className = 'mt-2 pl-6 space-y-1 text-xs';
+
+          ch.units.forEach((u, idx) => {
+            const isChecked = state.selectedForPrint.has(u.id);
+            const unitNumber = getFormattedUnitNumber(u.id, ch.chapterId, idx);
+            const item = document.createElement('div');
+            item.className = 'flex items-start justify-between py-0.5 gap-2';
+            item.innerHTML = `
+              <label class="flex items-start cursor-pointer text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white flex-1">
+                <input type="checkbox" data-modal-unit-id="${u.id}" data-parent-ch="${ch.chapterId}" class="modal-unit-checkbox rounded border-slate-300 text-brand-600 mr-2 mt-0.5 w-3.5 h-3.5 cursor-pointer shrink-0" ${isChecked ? 'checked' : ''} />
+                <span class="line-clamp-2"><strong class="font-mono text-slate-900 dark:text-slate-100">${unitNumber}</strong>: ${u.expectedQuestion}</span>
+              </label>
+            `;
+            unitsList.appendChild(item);
+          });
+
+          group.appendChild(unitsList);
+          treeContainer.appendChild(group);
+        });
+
+        updateModalSelectionCounter();
+        bindModalEvents();
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('print-modal');
+        if (modal) modal.classList.add('hidden');
+      }
+
+      function updateModalSelectionCounter() {
+        const counter = document.getElementById('modal-selected-counter');
+        if (counter) counter.textContent = `${state.selectedForPrint.size} questions selected`;
+      }
+
+      function bindModalEvents() {
+        document.querySelectorAll('.modal-chapter-master').forEach(master => {
+          master.addEventListener('change', (e) => {
+            const chId = parseInt(e.target.dataset.chapterId, 10);
+            const chapter = curriculum.find(c => c.chapterId === chId);
+            if (!chapter) return;
+
+            chapter.units.forEach(u => {
+              if (e.target.checked) state.selectedForPrint.add(u.id);
+              else state.selectedForPrint.delete(u.id);
+            });
+
+            document.querySelectorAll(`[data-parent-ch="${chId}"]`).forEach(cb => {
+              cb.checked = e.target.checked;
+            });
+
+            updateModalSelectionCounter();
+            updatePrintBadge();
+            renderCurriculum();
+          });
+        });
+
+        document.querySelectorAll('.modal-unit-checkbox').forEach(cb => {
+          cb.addEventListener('change', (e) => {
+            const unitId = e.target.dataset.modalUnitId;
+            const parentChId = parseInt(e.target.dataset.parentCh, 10);
+
+            if (e.target.checked) state.selectedForPrint.add(unitId);
+            else state.selectedForPrint.delete(unitId);
+
+            const chapter = curriculum.find(c => c.chapterId === parentChId);
+            if (chapter) {
+              const allChecked = chapter.units.every(u => state.selectedForPrint.has(u.id));
+              const master = document.querySelector(`.modal-chapter-master[data-chapter-id="${parentChId}"]`);
+              if (master) master.checked = allChecked;
+            }
+
+            updateModalSelectionCounter();
+            updatePrintBadge();
+            renderCurriculum();
+          });
+        });
+      }
+
+      function triggerPrint() {
+        if (state.selectedForPrint.size === 0) {
+          alert('Please select at least one question to print!');
+          return;
+        }
+        closeModal();
+        window.print();
+      }
+
+      function handleSearchInput(e) {
+        state.searchQuery = e.target.value;
+        const clearBtn = document.getElementById('clear-search-btn');
+        const statusBanner = document.getElementById('search-status-banner');
+        const statusText = document.getElementById('search-status-text');
+
+        if (state.searchQuery.trim().length > 0) {
+          clearBtn.classList.remove('hidden');
+          statusBanner.classList.remove('hidden');
+          statusText.textContent = `Filtering for: "${state.searchQuery}"`;
+        } else {
+          clearBtn.classList.add('hidden');
+          statusBanner.classList.add('hidden');
+        }
+
+        renderCurriculum();
+      }
+
+      function clearSearch() {
+        state.searchQuery = '';
+        const input = document.getElementById('search-input');
+        if (input) input.value = '';
+        document.getElementById('clear-search-btn').classList.add('hidden');
+        document.getElementById('search-status-banner').classList.add('hidden');
+        renderCurriculum();
+      }
+
+      function toggleMindmaps() {
+        state.showMindmaps = !state.showMindmaps;
+        const text = `Mind Maps: ${state.showMindmaps ? 'ON' : 'OFF'}`;
+        const dt = document.getElementById('mindmap-toggle-text');
+        const mb = document.getElementById('mindmap-toggle-mobile');
+        if (dt) dt.textContent = text;
+        if (mb) mb.textContent = `🧠 Maps: ${state.showMindmaps ? 'ON' : 'OFF'}`;
+
+        document.querySelectorAll('.chapter-mindmap-container').forEach(el => {
+          if (state.showMindmaps) el.classList.remove('hidden');
+          else el.classList.add('hidden');
+        });
+      }
+
+      function toggleEgyptianHints() {
+        state.showHints = !state.showHints;
+        const text = `Hints: ${state.showHints ? 'ON' : 'OFF'}`;
+        const dt = document.getElementById('hints-toggle-text');
+        const mb = document.getElementById('hints-toggle-mobile');
+        if (dt) dt.textContent = text;
+        if (mb) mb.textContent = `🇪🇬 Hints: ${state.showHints ? 'ON' : 'OFF'}`;
+
+        document.querySelectorAll('.egyptian-hint-block').forEach(el => {
+          if (state.showHints) el.classList.remove('hidden');
+          else el.classList.add('hidden');
+        });
+      }
+
+      function hideAllAnswers() {
+        curriculum.forEach(ch => ch.units.forEach(u => state.flashcardHidden.add(u.id)));
+        renderCurriculum();
+      }
+
+      function revealAllAnswers() {
+        state.flashcardHidden.clear();
+        renderCurriculum();
+      }
+
+      function initApp() {
+        initTheme();
+        renderCurriculum();
+        renderNavigation();
+
+        window.addEventListener('scroll', updateProgressBar, { passive: true });
+
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) searchInput.addEventListener('input', handleSearchInput);
+
+        const clearSearchBtn = document.getElementById('clear-search-btn');
+        if (clearSearchBtn) clearSearchBtn.addEventListener('click', clearSearch);
+
+        const resetLink = document.getElementById('reset-search-link');
+        if (resetLink) resetLink.addEventListener('click', clearSearch);
+
+        const themeBtn = document.getElementById('theme-toggle-btn');
+        if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
+        const themeBtnMob = document.getElementById('theme-toggle-mobile');
+        if (themeBtnMob) themeBtnMob.addEventListener('click', toggleTheme);
+
+        const mapBtn = document.getElementById('mindmap-toggle-btn');
+        if (mapBtn) mapBtn.addEventListener('click', toggleMindmaps);
+        const mapBtnMob = document.getElementById('mindmap-toggle-mobile');
+        if (mapBtnMob) mapBtnMob.addEventListener('click', toggleMindmaps);
+
+        const hintsBtn = document.getElementById('hints-toggle-btn');
+        if (hintsBtn) hintsBtn.addEventListener('click', toggleEgyptianHints);
+        const hintsBtnMob = document.getElementById('hints-toggle-mobile');
+        if (hintsBtnMob) hintsBtnMob.addEventListener('click', toggleEgyptianHints);
+
+        const testAllBtn = document.getElementById('test-mode-all-btn');
+        if (testAllBtn) testAllBtn.addEventListener('click', hideAllAnswers);
+        const revealAllBtn = document.getElementById('reveal-mode-all-btn');
+        if (revealAllBtn) revealAllBtn.addEventListener('click', revealAllAnswers);
+
+        const smartPrintBtn = document.getElementById('smart-print-btn');
+        if (smartPrintBtn) smartPrintBtn.addEventListener('click', openPrintModal);
+        const printBtnMob = document.getElementById('print-btn-mobile');
+        if (printBtnMob) printBtnMob.addEventListener('click', openPrintModal);
+
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+        const cancelPrintBtn = document.getElementById('cancel-print-btn');
+        if (cancelPrintBtn) cancelPrintBtn.addEventListener('click', closeModal);
+        const triggerPrintBtn = document.getElementById('trigger-print-btn');
+        if (triggerPrintBtn) triggerPrintBtn.addEventListener('click', triggerPrint);
+
+        const modalSelectAll = document.getElementById('modal-select-all');
+        if (modalSelectAll) {
+          modalSelectAll.addEventListener('click', () => {
+            curriculum.forEach(ch => ch.units.forEach(u => state.selectedForPrint.add(u.id)));
+            openPrintModal();
+            renderCurriculum();
+          });
+        }
+
+        const modalDeselectAll = document.getElementById('modal-deselect-all');
+        if (modalDeselectAll) {
+          modalDeselectAll.addEventListener('click', () => {
+            state.selectedForPrint.clear();
+            openPrintModal();
+            renderCurriculum();
+          });
+        }
+
+        const selectAllQuick = document.getElementById('select-all-quick');
+        if (selectAllQuick) {
+          selectAllQuick.addEventListener('click', () => {
+            curriculum.forEach(ch => ch.units.forEach(u => state.selectedForPrint.add(u.id)));
+            renderCurriculum();
+          });
+        }
+
+        const deselectAllQuick = document.getElementById('deselect-all-quick');
+        if (deselectAllQuick) {
+          deselectAllQuick.addEventListener('click', () => {
+            state.selectedForPrint.clear();
+            renderCurriculum();
+          });
+        }
+
+        const modal = document.getElementById('print-modal');
+        if (modal) {
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApp);
+      } else {
+        initApp();
+      }
+    })();
+  </script>
+</body>
+</html>
